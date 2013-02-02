@@ -6,6 +6,8 @@ gem 'pg'
 # Useful String extensions
 gem 'stringex'
 
+gem 'evernote_oauth'
+
 group :assets do
   gem 'bootstrap-sass'
   gem 'sass-rails',   '~> 3.2.3'
