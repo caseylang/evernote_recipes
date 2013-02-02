@@ -1,12 +1,12 @@
 postgresql: &postgresql
   adapter: postgresql
-  host: localhost
   encoding: unicode
   pool: 5
 
 development:
   <<: *postgresql
   database: recipes_development
+  host: localhost
   username: clang
   password:
 
@@ -16,11 +16,12 @@ development:
 test:
   <<: *postgresql
   database: recipes_test
+  host: localhost
   username: clang
   password:
 
 production:
   <<: *postgresql
-  database: recipes
+  database: recipes_production
   username:
   password:

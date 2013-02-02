@@ -2,9 +2,14 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 gem 'pg'
+gem 'haml-rails'
+gem 'thin'
 
 # Useful String extensions
 gem 'stringex'
+
+gem 'evernote_oauth'
+gem 'omniauth-evernote'
 
 group :assets do
   gem 'bootstrap-sass'
@@ -16,14 +21,12 @@ end
 gem 'jquery-rails'
 
 group :development do
-  gem 'thin'
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'spork'
 
   group :darwin do
     gem 'rb-readline', require: false
-
   end
 end
 
@@ -35,8 +38,12 @@ group :test do
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'capybara'
+  gem 'launchy'
+  gem 'vcr'
+  gem 'webmock'
   gem 'database_cleaner'
   gem 'growl'
+
   gem 'simplecov', require: false
   gem 'rb-fsevent', :require => false
   gem 'simplecov-rcov', require: false

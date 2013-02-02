@@ -1,0 +1,100 @@
+--- !ruby/hash:OmniAuth::AuthHash
+provider: evernote
+uid: 380568
+info: !ruby/hash:OmniAuth::AuthHash::InfoHash
+  name: 
+  nickname: recipes-demo
+credentials: !ruby/hash:Hashie::Mash
+  token: <%= ENV['EVERNOTE_DEMO_TOKEN'] %>
+  secret: ''
+extra: !ruby/hash:Hashie::Mash
+  access_token: !ruby/object:OAuth::AccessToken
+    token: <%= ENV['EVERNOTE_DEMO_TOKEN'] %>
+    secret: ''
+    consumer: !ruby/object:OAuth::Consumer
+      key: <%= ENV['EVERNOTE_CONSUMER_KEY'] %>
+      secret: <%= ENV['EVERNOTE_CONSUMER_SECRET'] %>
+      options:
+        :signature_method: HMAC-SHA1
+        :request_token_path: /oauth
+        :authorize_path: /OAuth.action
+        :access_token_path: /oauth
+        :proxy: 
+        :scheme: :header
+        :http_method: :post
+        :oauth_version: '1.0'
+        :site: https://sandbox.evernote.com
+      http: !ruby/object:Net::HTTP
+        address: sandbox.evernote.com
+        port: 443
+        curr_http_version: '1.1'
+        no_keepalive_server: false
+        close_on_empty_response: false
+        socket: 
+        started: false
+        open_timeout: 30
+        read_timeout: 30
+        continue_timeout: 
+        debug_output: 
+        use_ssl: true
+        ssl_context: !ruby/object:OpenSSL::SSL::SSLContext
+          cert: 
+          key: 
+          client_ca: 
+          ca_file: /usr/share/curl/curl-ca-bundle.crt
+          ca_path: 
+          timeout: 
+          verify_mode: 1
+          verify_depth: 5
+          verify_callback: 
+          options: -2147480577
+          cert_store: 
+          extra_chain_cert: 
+          client_cert_cb: 
+          tmp_dh_callback: 
+          session_id_context: 
+          session_get_cb: 
+          session_new_cb: 
+          session_remove_cb: 
+          servername_cb: 
+        enable_post_connection_check: true
+        compression: 
+        sspi_enabled: false
+        ssl_version: 
+        key: 
+        cert: 
+        ca_file: /usr/share/curl/curl-ca-bundle.crt
+        ca_path: 
+        cert_store: 
+        ciphers: 
+        verify_mode: 1
+        verify_callback: 
+        verify_depth: 5
+        ssl_timeout: 
+      http_method: :post
+    params:
+      :oauth_token: <%= ENV['EVERNOTE_DEMO_TOKEN'] %>
+      oauth_token: <%= ENV['EVERNOTE_DEMO_TOKEN'] %>
+      :oauth_token_secret: ''
+      oauth_token_secret: ''
+      :edam_shard: s1
+      edam_shard: s1
+      :edam_userId: '380568'
+      edam_userId: '380568'
+      :edam_expires: '1392312727607'
+      edam_expires: '1392312727607'
+      :edam_noteStoreUrl: https://sandbox.evernote.com/shard/s1/notestore
+      edam_noteStoreUrl: https://sandbox.evernote.com/shard/s1/notestore
+      :edam_webApiUrlPrefix: https://sandbox.evernote.com/shard/s1/
+      edam_webApiUrlPrefix: https://sandbox.evernote.com/shard/s1/
+  raw_info: !ruby/object:Evernote::EDAM::Type::User
+    id: 380568
+    username: recipes-demo
+    privilege: 1
+    active: true
+    shardId: s1
+    accounting: !ruby/object:Evernote::EDAM::Type::Accounting
+      uploadLimit: 62914560
+      uploadLimitEnd: 1363158000000
+      uploadLimitNextMonth: 62914560
+      premiumServiceStatus: 0
