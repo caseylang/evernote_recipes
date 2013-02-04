@@ -1,8 +1,10 @@
+$evernoteGreen: #5fb336;
+$btnPrimaryBackground: $evernoteGreen;
 @import "bootstrap";
+
 /* mixins, variables, etc. */
 
 $grayMediumLight: #f5f5f5;
-$evernoteGreen: #5fb336;
 $darkGrey: #747474;
 
 @mixin box_sizing {
@@ -12,12 +14,14 @@ $darkGrey: #747474;
 }
 
 /* universal */
-html {
-  overflow-y: scroll;
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
 }
 
-body {
-  padding-top: 60px;
+html {
+  overflow-y: scroll;
 }
 
 section {
@@ -41,69 +45,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1;
 }
 
-h1 {
-  font-size: 3em;
-  letter-spacing: -2px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 1.7em;
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: normal;
-  color: $grayLight;
-}
-
-p {
-  font-size: 1.1em;
-  line-height: 1.7em;
-}
-
 /* header */
-
 #logo {
-  float: left;
-  margin-right: 10px;
-  font-family: helvetica, arial, sans-serif;
   font-size: 1.7em;
   color: $evernoteGreen;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  line-height: 1;
   &:hover {
     color: $darkGrey;
     text-decoration: none;
-  }
-}
-
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
-  a {
-    color: $gray;
-    &:hover {
-      color: $grayDarker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 10px;
-    }
   }
 }
 
@@ -115,4 +63,36 @@ footer {
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -60px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+footer {
+  height: 60px;
+}
+
+footer {
+  background-color: #f5f5f5;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+  footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
