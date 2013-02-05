@@ -6,11 +6,13 @@
         I'm really sorry but I couldn't find any recipes in any of your notebooks.
         You either hate food or I screwed up.
   - else
-    %ul
-    - @recipes.each do |recipe|
-      %li
-        = image_tag "#{get_note_image recipe, size: 250}"
-        = recipe.title
+    %ul.thumbnails
+      - @recipes.each do |recipe|
+        %li.span4
+          %a.thumbnail{href: '#'}
+            = image_tag "#{get_note_image recipe}"
+            .caption
+              %h4= recipe.title
 - else
   .hero-unit
     %h1 Hey new guy!

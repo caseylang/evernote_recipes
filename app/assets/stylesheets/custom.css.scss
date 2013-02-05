@@ -18,10 +18,6 @@ html {
   overflow-y: scroll;
 }
 
-body {
-  padding: 40px;
-}
-
 section {
   overflow: auto;
 }
@@ -44,13 +40,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* header */
-#logo {
+.navbar .brand {
   font-size: 1.7em;
   color: $evernoteGreen;
-  &:hover {
-    color: $darkGrey;
-    text-decoration: none;
-  }
 }
 
 /* miscellaneous */
@@ -61,6 +53,16 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   margin-top: 45px;
   @include box_sizing;
+}
+
+a.thumbnail {
+  &:hover {
+    border-color: $evernoteGreen;
+    .caption h4 {
+      color: $evernoteGreen;
+    }
+    text-decoration: none;
+  }
 }
 
 /* Sticky footer styles

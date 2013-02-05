@@ -31,7 +31,7 @@ module SessionsHelper
   end
 
   #todo: 100% doesn't belong here
-  def get_note_image(recipe, options)
+  def get_note_image(recipe, options= { })
     accepted_formats = [:jpg, :gif, :bmp, :png]
     img_url = 'rails.png'
     if session[:access_token]

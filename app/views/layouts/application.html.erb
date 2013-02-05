@@ -13,14 +13,13 @@
 <body>
 <%= render 'layouts/header' %>
 <div class="wrap">
+  <div id="push"></div>
     <div class="container">
       <% flash.each do |key, value| %>
           <%= content_tag(:div, value, class: "alert alert-#{key}") %>
       <% end %>
       <%= yield %>
-
     </div>
-  <div id="push"></div>
 </div>
 <%= render 'layouts/footer' %>
 <%= debug(params) if Rails.env.development? %>
