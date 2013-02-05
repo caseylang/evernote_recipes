@@ -8,7 +8,9 @@
   - else
     %ul
     - @recipes.each do |recipe|
-      %li= recipe.title
+      %li
+        = image_tag "#{get_note_image recipe, size: 250}"
+        = recipe.title
 - else
   .hero-unit
     %h1 Hey new guy!

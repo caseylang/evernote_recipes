@@ -29,4 +29,19 @@ module SessionsHelper
   def store_location
     session[:return_to] = request.url
   end
+
+  #todo: 100% doesn't belong here
+  def get_note_image(recipe, options)
+    accepted_formats = [:jpg, :gif, :bmp, :png]
+    img_url = 'rails.png'
+    if session[:access_token]
+      web_url = session[:access_token].params[:edam_webApiUrlPrefix]
+      img_url = "#{web_url}/thm/note/#{recipe.guid}"
+      if options[:format] && accepted_formats.find_index(options[:format].downcase)
+        img_url << ".#{options[:format].downcase}"
+      end
+      img_url << "?size=#{options[:size]}" if options[:size]
+    end
+    img_url
+  end
 end
