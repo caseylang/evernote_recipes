@@ -10,7 +10,7 @@ module SessionsHelper
   end
 
   def client
-    @client ||= EvernoteOAuth::Client.new
+    @client ||= EvernoteOAuth::Client.new token: auth_token
   end
 
   def user_store
