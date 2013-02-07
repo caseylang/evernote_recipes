@@ -80,7 +80,7 @@ GEM
     guard-rspec (2.4.0)
       guard (>= 1.1)
       rspec (~> 2.11)
-    guard-spork (1.4.1)
+    guard-spork (1.4.2)
       childprocess (>= 0.2.3)
       guard (>= 1.1)
       spork (>= 0.8.4)
@@ -90,6 +90,7 @@ GEM
       activesupport (>= 3.1, < 4.1)
       haml (~> 3.1)
       railties (>= 3.1, < 4.1)
+    hashie (1.2.0)
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -105,12 +106,22 @@ GEM
       treetop (~> 1.4.8)
     metaclass (0.0.1)
     method_source (0.8.1)
-    mime-types (1.19)
+    mime-types (1.20.1)
     mocha (0.10.5)
       metaclass (~> 0.0.1)
     multi_json (1.5.0)
     nokogiri (1.5.6)
     oauth (0.4.7)
+    omniauth (1.1.1)
+      hashie (~> 1.2)
+      rack
+    omniauth-evernote (1.2.0)
+      evernote-thrift
+      multi_json (~> 1.0)
+      omniauth-oauth (~> 1.0)
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
     pg (0.14.1)
     polyglot (0.3.3)
     pry (0.9.11.4)
@@ -142,7 +153,7 @@ GEM
     rake (10.0.3)
     rb-fsevent (0.9.3)
     rb-readline (0.4.2)
-    rdoc (3.12)
+    rdoc (3.12.1)
       json (~> 1.4)
     rspec (2.12.0)
       rspec-core (~> 2.12.0)
@@ -221,6 +232,7 @@ DEPENDENCIES
   guard-spork
   haml-rails
   jquery-rails
+  omniauth-evernote
   pg
   rails (= 3.2.11)
   rb-fsevent

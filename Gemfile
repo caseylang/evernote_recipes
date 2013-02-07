@@ -8,6 +8,7 @@ gem 'haml-rails'
 gem 'stringex'
 
 gem 'evernote_oauth'
+gem 'omniauth-evernote'
 
 group :assets do
   gem 'bootstrap-sass'

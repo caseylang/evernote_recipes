@@ -1,10 +1,10 @@
 EvernoteRecipes::Application.routes.draw do
   root to: "recipes#index"
+  match '/auth/evernote', as:'signin'
+  match '/auth/evernote/callback', controller: :sessions, to: :create
+  match '/auth/evernote/failure', controller: :sessions, to: :failure
 
   namespace :sessions do
-    # The route to create should be a post but Evernote sends as a normal get request
-    get :create
-    get :new
     delete :destroy
   end
 
