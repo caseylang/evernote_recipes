@@ -4,4 +4,4 @@
 /log/*.log
 /tmp
 /config/env_vars.yml
-/spec/fixtures/evernote_test_user.yml
+/public/assets/*
