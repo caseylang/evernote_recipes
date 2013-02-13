@@ -3,6 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.11'
 gem 'pg'
 gem 'haml-rails'
+gem 'thin'
 
 # Useful String extensions
 gem 'stringex'
@@ -20,14 +21,12 @@ end
 gem 'jquery-rails'
 
 group :development do
-  gem 'thin'
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'spork'
 
   group :darwin do
     gem 'rb-readline', require: false
-
   end
 end
 
