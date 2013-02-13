@@ -5,11 +5,11 @@ info: !ruby/hash:OmniAuth::AuthHash::InfoHash
   name: 
   nickname: recipes-demo
 credentials: !ruby/hash:Hashie::Mash
-  token: S=s1:U=5ce98:E=1442c4e3837:C=13cd49d0c37:P=185:A=<%= ENV['EVERNOTE_CONSUMER_KEY'] %>:H=157b481e18324aefb22022ceb35756d1
+  token: <%= ENV['EVERNOTE_DEMO_TOKEN'] %>
   secret: ''
 extra: !ruby/hash:Hashie::Mash
   access_token: !ruby/object:OAuth::AccessToken
-    token: S=s1:U=5ce98:E=1442c4e3837:C=13cd49d0c37:P=185:A=<%= ENV['EVERNOTE_CONSUMER_KEY'] %>:H=157b481e18324aefb22022ceb35756d1
+    token: <%= ENV['EVERNOTE_DEMO_TOKEN'] %>
     secret: ''
     consumer: !ruby/object:OAuth::Consumer
       key: <%= ENV['EVERNOTE_CONSUMER_KEY'] %>
@@ -73,8 +73,8 @@ extra: !ruby/hash:Hashie::Mash
         ssl_timeout: 
       http_method: :post
     params:
-      :oauth_token: S=s1:U=5ce98:E=1442c4e3837:C=13cd49d0c37:P=185:A=<%= ENV['EVERNOTE_CONSUMER_KEY'] %>:H=157b481e18324aefb22022ceb35756d1
-      oauth_token: S=s1:U=5ce98:E=1442c4e3837:C=13cd49d0c37:P=185:A=<%= ENV['EVERNOTE_CONSUMER_KEY'] %>:H=157b481e18324aefb22022ceb35756d1
+      :oauth_token: <%= ENV['EVERNOTE_DEMO_TOKEN'] %>
+      oauth_token: <%= ENV['EVERNOTE_DEMO_TOKEN'] %>
       :oauth_token_secret: ''
       oauth_token_secret: ''
       :edam_shard: s1
