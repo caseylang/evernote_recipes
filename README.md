@@ -18,6 +18,11 @@ Instead of giving up though, I decided to make Evernote Recipes. Maybe I won't m
  
 ## This is only a test
 This app was built just as an excuse for me to play around with the Evernote API. I have no intention of making a real live consumer web app out of it. There isn't a lot of code in here at the moment but the app covers a few things that were tricky to get right at first. If you need a reference for how to authenticate with the Evernote API, what a testing environment could look like, or just love looking at Ruby code, you might find something in this project useful.
- 
+
+### Demo
+I've set up a demo of [Evernote Recipes](http://boiling-anchorage-5559.herokuapp.com/) for you to play with! As I add more features to this app, I'll update the demo as well. 
+
+While the demo is squarly in 'DEMO MODE' and doesn't allow login to anything other than the demo account, I promise it's really grabbing its data directly from Evernote. I wish I could set up this demo to allow you to login with your personal Evernote account but my Evernote developer creditionals only allow me access to accounts in the [sandbox](http://dev.evernote.com/start/core/testing.php).
+
 ## Want to help?
 If you have any suggestions, want to see something added, or want to fork the project and play on your own, feel free! This is all just for fun anyway. 
