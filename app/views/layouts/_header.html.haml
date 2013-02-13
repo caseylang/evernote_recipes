@@ -11,6 +11,6 @@
                 =current_user.username
                 .caret
               %ul.dropdown-menu
-                %li= link_to 'Sign Out', sessions_destroy_path, method: :delete
+                %li= link_to 'Sign Out', sessions_destroy_path, method: :delete, id: 'sign_out_header'
           - else
-            %li= link_to "Sign In", signin_path
+            %li= link_to "Sign In", signin_path, id: 'sign_in_header'

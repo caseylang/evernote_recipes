@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sandbox.evernote.com/edam/user
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        gAEAAQAAAAxjaGVja1ZlcnNpb24AAAAACwABAAAACEVEQU1UZXN0BgACAAEG
+        AAMAFwA=
+    headers:
+      Content-Type:
+      - application/x-thrift
+      User-Agent:
+      - EvernoteOAuth / 0.1.5; Ruby / 1.9.3;
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        QXBhY2hlLUNveW90ZS8xLjE=
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bm8tdHJhbnNmb3Jt
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24veC10aHJpZnQ=
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        Mjk=
+      !binary "RGF0ZQ==":
+      - !binary |-
+        V2VkLCAxMyBGZWIgMjAxMyAwMjowNDozNyBHTVQ=
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        gAEAAgAAAAxjaGVja1ZlcnNpb24AAAAAAgAAAQA=
+    http_version: 
+  recorded_at: Wed, 13 Feb 2013 02:04:51 GMT
+- request:
+    method: post
+    uri: https://sandbox.evernote.com/edam/user
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        gAEAAQAAAA9nZXROb3RlU3RvcmVVcmwAAAAACwABAAAAXVM9czE6VT01YmVj
+        YTpFPTE0NDI4YjEzOWY0OkM9MTNjZDEwMDBkZjQ6UD0xODU6QT1jbGFuZzEy
+        MzQ6SD0yYzQ0MmM1NmJjY2MyZTgxYzJiNjBjZTYwMjcxN2ExZAA=
+    headers:
+      Content-Type:
+      - application/x-thrift
+      User-Agent:
+      - EvernoteOAuth / 0.1.5; Ruby / 1.9.3;
+      Accept:
+      - ! '*/*'
+  response:
+    status:
+      code: 200
+      message: !binary |-
+        T0s=
+    headers:
+      !binary "U2VydmVy":
+      - !binary |-
+        QXBhY2hlLUNveW90ZS8xLjE=
+      !binary "Q2FjaGUtQ29udHJvbA==":
+      - !binary |-
+        bm8tdHJhbnNmb3Jt
+      !binary "Q29udGVudC1UeXBl":
+      - !binary |-
+        YXBwbGljYXRpb24veC10aHJpZnQ=
+      !binary "Q29udGVudC1MZW5ndGg=":
+      - !binary |-
+        ODI=
+      !binary "RGF0ZQ==":
+      - !binary |-
+        V2VkLCAxMyBGZWIgMjAxMyAwMjowNDozNyBHTVQ=
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        gAEAAgAAAA9nZXROb3RlU3RvcmVVcmwAAAAACwAAAAAAL2h0dHBzOi8vc2Fu
+        ZGJveC5ldmVybm90ZS5jb20vc2hhcmQvczEvbm90ZXN0b3JlAA==
+    http_version: 
+  recorded_at: Wed, 13 Feb 2013 02:04:52 GMT
+recorded_with: VCR 2.4.0

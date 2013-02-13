@@ -1,5 +1,5 @@
 notification :growl
-interactor :simple
+#interactor :simple
 
 group :specs do
     guard 'spork', :rspec_env => { 'RAILS_ENV' => 'test' } do
@@ -13,7 +13,7 @@ group :specs do
       watch('test/test_helper.rb')
     end
 
-    guard 'rspec', :version => 2, :all_after_pass => false, :cli => '--color -f doc --drb' do
+    guard 'rspec', :all_after_pass => false, :cli => '--color -f doc --drb' do
       watch(%r{^spec/.+_spec\.rb$})
       watch(%r{^lib/(.+)\.rb$})     { |m| "spec/lib/#{m[1]}_spec.rb" }
       watch('spec/spec_helper.rb')  { "spec" }

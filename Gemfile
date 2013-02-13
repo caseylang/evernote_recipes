@@ -39,8 +39,12 @@ group :test do
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'capybara'
+  gem 'launchy'
+  gem 'vcr'
+  gem 'webmock'
   gem 'database_cleaner'
   gem 'growl'
+
   gem 'simplecov', require: false
   gem 'rb-fsevent', :require => false
   gem 'simplecov-rcov', require: false
