@@ -4,4 +4,3 @@
 /log/*.log
 /tmp
 /config/env_vars.yml
-/public/assets/*
