@@ -1,0 +1,7 @@
+%ul.thumbnails
+- @recipes.each do |recipe|
+  %li.span4
+    %a.thumbnail{href: '#'}
+      = image_tag "#{get_note_image recipe}"
+      .caption
+        %h4= recipe.title

@@ -1,0 +1,8 @@
+- if @recipes.empty?
+  .hero-unit
+    %h1 Uh-Oh.
+    %p
+      I'm really sorry but I couldn't find any recipes in any of your notebooks.
+      You either hate food or I screwed up.
+- else
+  = render 'recipes/recipe', recipes: @recipes
